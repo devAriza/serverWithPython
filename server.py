@@ -12,16 +12,18 @@ def application(env, start_response):
     headers = [('Content-Type', 'text/html')]
     start_response('200 OK', headers)
 
+    #Indicar ubicacion para obtener el template
     env = Environment(loader = FileSystemLoader('templates'))
     template = env.get_template('index.html')
-
+    #Renderizar template
     html = template.render(
         {
+            #Se crea el template en base al siguiente diccionario
             'title':'Servidor en Python',
             'name':'Jorge Ariza Ramirez'
         }
     )
-
+    #Enviar template
     return [bytes(html, 'utf-8')]
 
 #direccion en el que se ejecuta el servidor
