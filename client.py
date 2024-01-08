@@ -7,3 +7,5 @@ response = request.urlopen(URL)
 print(response.__dict__)
 #obtener el contenido de la respuesta del servidor
 print(response.read())
+
+
