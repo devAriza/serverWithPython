@@ -36,7 +36,7 @@ try:
         email='info@codigofacilito.com',
         age=10
     )
-    
+
     print(user1)
 
 except ValidationError as e:
